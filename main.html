@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEX MODERNA | Specjalizacja - Odpowiedzialność Cywilna</title>
+    <title>Kancelaria Prawna | Nowoczesne Podejście do Prawa</title>
     <style>
         :root {
             --dark: #232742;
@@ -11,8 +11,6 @@
             --accent: #C5A46D;
             --text-dark: #333;
             --text-light: #fff;
-            --glass-dark: rgba(35, 39, 66, 0.8);
-            --glass-light: rgba(239, 232, 214, 0.9);
         }
         
         * {
@@ -26,24 +24,15 @@
             background-color: var(--light);
             color: var(--text-dark);
             line-height: 1.6;
-            background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
-            background-color: rgba(239, 232, 214, 0.9);
         }
         
-        /* Glass Morphism Header */
         header {
-            background: var(--glass-dark);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background-color: var(--dark);
             padding: 1.5rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(239, 232, 214, 0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .container {
@@ -63,18 +52,6 @@
             font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: 1px;
-            position: relative;
-            padding-left: 2.5rem;
-        }
-        
-        .logo:before {
-            content: '01';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1rem;
-            opacity: 0.6;
         }
         
         .nav-links {
@@ -105,51 +82,30 @@
             width: 100%;
         }
         
-        /* Hero Section with Glass Overlay */
         .hero {
-            height: 90vh;
+            height: 80vh;
             display: flex;
             align-items: center;
-            position: relative;
-        }
-        
-        .hero:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--glass-dark), rgba(35, 39, 66, 0.6));
-            backdrop-filter: blur(2px);
-            z-index: 0;
+            background: linear-gradient(rgba(35, 39, 66, 0.8), rgba(35, 39, 66, 0.8)), 
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: var(--light);
+            text-align: center;
         }
         
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 2rem;
-            background: rgba(239, 232, 214, 0.15);
-            border-radius: 16px;
-            border: 1px solid rgba(239, 232, 214, 0.2);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
         }
         
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
             line-height: 1.2;
-            color: var(--light);
         }
         
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            color: var(--light);
             opacity: 0.9;
         }
         
@@ -183,10 +139,8 @@
             color: var(--dark);
         }
         
-        /* About Section with Numbered Titles */
         .about {
             padding: 5rem 0;
-            position: relative;
         }
         
         .section-title {
@@ -195,19 +149,17 @@
             color: var(--dark);
             font-size: 2.5rem;
             position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-            padding-left: 3rem;
         }
         
-        .section-title:before {
-            content: '02';
+        .section-title:after {
+            content: '';
             position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 1.5rem;
-            color: rgba(35, 39, 66, 0.3);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
         }
         
         .about-content {
@@ -221,7 +173,6 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-            border: 1px solid rgba(35, 39, 66, 0.1);
         }
         
         .about-img img {
@@ -241,30 +192,10 @@
             color: var(--dark);
         }
         
-        /* Glass Morphism Services */
         .services {
             padding: 5rem 0;
-            position: relative;
-        }
-        
-        .services:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--glass-dark);
-            z-index: -1;
-        }
-        
-        .services .section-title {
+            background-color: var(--dark);
             color: var(--light);
-        }
-        
-        .services .section-title:before {
-            content: '03';
-            color: rgba(239, 232, 214, 0.3);
         }
         
         .services-grid {
@@ -275,21 +206,17 @@
         }
         
         .service-card {
-            background: rgba(239, 232, 214, 0.1);
+            background-color: rgba(255,255,255,0.1);
             padding: 2rem;
-            border-radius: 16px;
+            border-radius: 10px;
             transition: all 0.3s ease;
             cursor: pointer;
-            border: 1px solid rgba(239, 232, 214, 0.3);
-            backdrop-filter: blur(5px);
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.1),
-                inset 0 0 20px rgba(239, 232, 214, 0.05);
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            background: rgba(239, 232, 214, 0.2);
+            background-color: rgba(255,255,255,0.2);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         
@@ -302,7 +229,6 @@
         .service-card p {
             opacity: 0.8;
             margin-bottom: 1.5rem;
-            color: var(--light);
         }
         
         .service-card .btn {
@@ -310,7 +236,6 @@
             color: var(--dark);
         }
         
-        /* Glass Modal */
         .email-modal {
             position: fixed;
             top: 0;
@@ -325,7 +250,6 @@
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.3s ease;
-            backdrop-filter: blur(5px);
         }
         
         .email-modal.active {
@@ -334,15 +258,12 @@
         }
         
         .email-form {
-            background: var(--glass-light);
-            padding: 3rem;
-            border-radius: 16px;
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
             width: 90%;
             max-width: 600px;
             position: relative;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(35, 39, 66, 0.1);
-            box-shadow: 0 10px 30px rgba(35, 39, 66, 0.2);
         }
         
         .close-modal {
@@ -352,13 +273,10 @@
             font-size: 1.5rem;
             cursor: pointer;
             color: var(--dark);
-            background: none;
-            border: none;
         }
         
         .form-group {
             margin-bottom: 1.5rem;
-            position: relative;
         }
         
         .form-group label {
@@ -372,18 +290,10 @@
         .form-group textarea {
             width: 100%;
             padding: 0.8rem;
-            border: 1px solid rgba(35, 39, 66, 0.2);
-            border-radius: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             font-size: 1rem;
-            background-color: rgba(255,255,255,0.8);
-            transition: all 0.3s ease;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(197, 164, 109, 0.3);
+            background-color: #fff;
         }
         
         .form-group textarea {
@@ -391,58 +301,17 @@
             resize: vertical;
         }
         
-        /* Footer with Brand Guidelines */
         footer {
-            background: var(--glass-dark);
+            background-color: var(--dark);
             color: var(--light);
             padding: 3rem 0;
             text-align: center;
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(239, 232, 214, 0.2);
         }
         
         .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        
-        .brand-guidelines {
-            background: rgba(239, 232, 214, 0.1);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            max-width: 800px;
-            width: 100%;
-            border: 1px solid rgba(239, 232, 214, 0.2);
-        }
-        
-        .brand-guidelines h3 {
-            margin-bottom: 1.5rem;
-            color: var(--accent);
-        }
-        
-        .brand-guidelines ul {
-            list-style: none;
-            text-align: left;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        
-        .brand-guidelines li {
-            position: relative;
-            padding-left: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .brand-guidelines li:before {
-            content: attr(data-number);
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-weight: bold;
-            color: var(--accent);
         }
         
         .social-links {
@@ -455,28 +324,17 @@
             color: var(--light);
             font-size: 1.5rem;
             transition: color 0.3s ease;
-            background: rgba(239, 232, 214, 0.1);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(239, 232, 214, 0.3);
         }
         
         .social-links a:hover {
             color: var(--accent);
-            background: rgba(239, 232, 214, 0.2);
         }
         
         .copyright {
             opacity: 0.7;
             font-size: 0.9rem;
-            margin-top: 1rem;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -493,18 +351,6 @@
             .about-img {
                 order: -1;
             }
-            
-            .brand-guidelines ul {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                padding-left: 2.5rem;
-            }
-            
-            .section-title:before {
-                font-size: 1.2rem;
-            }
         }
     </style>
 </head>
@@ -512,7 +358,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">LEX MODERNA</div>
+                <div class="logo">a.banaszak</div>
                 <div class="nav-links">
                     <a href="#about">O mnie</a>
                     <a href="#services">Usługi</a>
@@ -524,8 +370,8 @@
     
     <section class="hero">
         <div class="hero-content">
-            <h1>Specjalizacja w Odpowiedzialności Cywilnej</h1>
-            <p>Kompleksowa ochrona prawna w sprawach odszkodowawczych, dochodzenie roszczeń z tytułu czynów niedozwolonych i umów.</p>
+            <h1>Nowoczesne podejście do prawa</h1>
+            <p>Łączę tradycyjne wartości prawnicze z innowacyjnymi rozwiązaniami, aby zapewnić kompleksową obsługę prawną dostosowaną do Twoich potrzeb.</p>
             <a href="#services" class="btn">Poznaj usługi</a>
             <a href="#contact" class="btn btn-outline">Skontaktuj się</a>
         </div>
@@ -536,13 +382,13 @@
             <h2 class="section-title">O mnie</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Anna Kowalska</h2>
-                    <p>Jestem prawnikiem specjalizującym się w prawie cywilnym, w szczególności w zakresie odpowiedzialności odszkodowawczej. Moje doświadczenie obejmuje kompleksową obsługę sporów o odszkodowania i zadośćuczynienia.</p>
-                    <p>Ukończyłam studia prawnicze na Uniwersytecie Warszawskim, a następnie odbyłam aplikację radcowską. Specjalizuję się w dochodzeniu roszczeń z tytułu czynów niedozwolonych oraz odpowiedzialności kontraktowej.</p>
-                    <p>Moja praktyka opiera się na indywidualnym podejściu do każdego przypadku i poszukiwaniu optymalnych rozwiązań prawnych dla klientów.</p>
+                    <h2>Alicja Banaszak</h2>
+                    <p>Jestem prawnikiem z ponad 10-letnim doświadczeniem, specjalizującym się w prawie gospodarczym i cywilnym. Moja praktyka opiera się na indywidualnym podejściu do każdego klienta i poszukiwaniu kreatywnych rozwiązań prawnych.</p>
+                    <p>Ukończyłam studia prawnicze na Uniwersytecie Warszawskim, a następnie odbyłam aplikację radcowską. Obecnie prowadzę własną kancelarię, gdzie łączę tradycyjne wartości prawnicze z nowoczesnymi metodami pracy.</p>
+                    <p>Wierzę, że prawo powinno być nie tylko skuteczne, ale także zrozumiałe i dostępne dla każdego. Dlatego stawiam na przejrzystą komunikację i budowanie długotrwałych relacji z klientami.</p>
                 </div>
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Anna Kowalska - prawnik">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Alicja Banaszak - prawnik">
                 </div>
             </div>
         </div>
@@ -552,39 +398,121 @@
         <div class="container">
             <h2 class="section-title">Obszary specjalizacji</h2>
             <div class="services-grid">
+                <div class="service-card" data-service="spory-gospodarcze">
+                    <h3>Obsługa sporów gospodarczych</h3>
+                    <p>Kompleksowa obsługa prawna sporów między przedsiębiorcami, w tym windykacja należności, egzekucja zobowiązań i postępowania sądowe.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="prawna-firm">
+                    <h3>Obsługa prawna firm</h3>
+                    <p>Stała opieka prawna dla przedsiębiorstw, w tym przygotowywanie dokumentów, doradztwo przy podejmowaniu decyzji biznesowych i reprezentacja przed organami.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="umowy">
+                    <h3>Obsługa prawna umów</h3>
+                    <p>Przygotowywanie, weryfikacja i negocjowanie umów handlowych, cywilnoprawnych i pracowniczych, dostosowanych do indywidualnych potrzeb klienta.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="nieruchomosci">
+                    <h3>Prawo nieruchomości</h3>
+                    <p>Kompleksowa obsługa transakcji nieruchomościowych, w tym due diligence, przygotowywanie umów i reprezentacja w postępowaniach administracyjnych.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="ochrona-danych">
+                    <h3>Ochrona danych osobowych</h3>
+                    <p>Doradztwo w zakresie RODO, przygotowanie dokumentacji ochrony danych, reprezentacja przed organami nadzorczymi.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="wlasność-intelektualna">
+                    <h3>Własność intelektualna</h3>
+                    <p>Ochrona praw autorskich, znaków towarowych, patentów oraz zwalczanie nieuczciwej konkurencji.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+
+                    <section id="services" class="services">
+        
                 <div class="service-card" data-service="odszkodowania-majatkowe">
                     <h3>Odszkodowania majątkowe</h3>
-                    <p>Dochodzenie roszczeń odszkodowawczych za szkody majątkowe, w tym utracone korzyści, uszkodzenie mienia i koszty naprawy.</p>
+                    <p>Dochodzenie roszczeń za szkody majątkowe, utracone korzyści i koszty naprawy wynikające z czynów niedozwolonych lub niewykonania zobowiązań.</p>
                     <button class="btn">Wyślij zapytanie</button>
                 </div>
                 
                 <div class="service-card" data-service="zadoscuczynienie">
                     <h3>Zadośćuczynienie za krzywdę</h3>
-                    <p>Reprezentacja w sprawach o zadośćuczynienie za doznaną krzywdę, cierpienie fizyczne i psychiczne oraz naruszenie dóbr osobistych.</p>
+                    <p>Reprezentacja w sprawach o zadośćuczynienie za doznaną krzywdę, cierpienie fizyczne/psychiczne i naruszenie dóbr osobistych.</p>
                     <button class="btn">Wyślij zapytanie</button>
                 </div>
                 
                 <div class="service-card" data-service="czyn-niedozwolony">
-                    <h3>Czyny niedozwolone</h3>
-                    <p>Dochodzenie roszczeń z tytułu odpowiedzialności deliktowej, w tym szkód wyrządzonych przez produkt niebezpieczny.</p>
+                    <h3>Odpowiedzialność deliktowa</h3>
+                    <p>Dochodzenie roszczeń z tytułu czynów niedozwolonych (art. 415 k.c.), w tym szkód wyrządzonych przez produkt niebezpieczny.</p>
                     <button class="btn">Wyślij zapytanie</button>
                 </div>
                 
                 <div class="service-card" data-service="umowy-sprzedazy">
-                    <h3>Roszczenia z umów sprzedaży</h3>
-                    <p>Dochodzenie roszczeń z tytułu niewykonania lub nienależytego wykonania umów sprzedaży, rękojmi i gwarancji.</p>
+                    <h3>Spory umowne</h3>
+                    <p>Rozwiązywanie sporów z umów sprzedaży, zlecenia, najmu oraz dochodzenie roszczeń z tytułu niewykonania zobowiązań.</p>
                     <button class="btn">Wyślij zapytanie</button>
                 </div>
                 
-                <div class="service-card" data-service="umowy-zlecenia">
-                    <h3>Spory z umów zlecenia</h3>
-                    <p>Rozwiązywanie sporów dotyczących wykonania umów zlecenia, w tym kwestii wynagrodzenia i odpowiedzialności wykonawcy.</p>
+                <!-- Prawo rodzinne -->
+                <div class="service-card" data-service="rozwod-separacja">
+                    <h3>Rozwód i separacja</h3>
+                    <p>Kompleksowa obsługa prawna w sprawach o rozwód (z orzekaniem/bez orzekania o winie) i separację, w tym podział majątku.</p>
                     <button class="btn">Wyślij zapytanie</button>
                 </div>
                 
-                <div class="service-card" data-service="umowy-najmu">
-                    <h3>Konflikty najmu</h3>
-                    <p>Rozstrzyganie sporów z umów najmu, w tym dotyczących zwrotu kaucji, napraw i przedłużenia umów.</p>
+                <div class="service-card" data-service="alimenty-kontakty">
+                    <h3>Alimenty i kontakty z dzieckiem</h3>
+                    <p>Ustalanie, zmiana i egzekucja alimentów oraz rozstrzyganie sporów o kontakty z dzieckiem i władzę rodzicielską.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="ojcostwo">
+                    <h3>Ustalenie/zaprzeczenie ojcostwa</h3>
+                    <p>Reprezentacja w postępowaniach o ustalenie lub zaprzeczenie ojcostwa oraz związane z tym skutki prawne.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <!-- Prawo medyczne -->
+                <div class="service-card" data-service="bledy-medyczne">
+                    <h3>Błędy medyczne</h3>
+                    <p>Dochodzenie roszczeń z tytułu błędów w leczeniu i diagnostyce, w tym odszkodowań i zadośćuczynień za szkody na zdrowiu.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="prawa-pacjenta">
+                    <h3>Prawa pacjenta</h3>
+                    <p>Ochrona praw pacjenta (brak zgody, tajemnica lekarska) oraz reprezentacja przed Rzecznikiem Praw Pacjenta i izbami lekarskimi.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="obrona-lekarzy">
+                    <h3>Obrona lekarzy</h3>
+                    <p>Reprezentacja lekarzy i placówek medycznych w sprawach o odpowiedzialność cywilną, karną i zawodową.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <!-- Prawo ubezpieczeń społecznych -->
+                <div class="service-card" data-service="odwolania-zus">
+                    <h3>Odwołania od decyzji ZUS</h3>
+                    <p>Reprezentacja w sporach z ZUS dotyczących rent, emerytur, zasiłków i świadczeń rehabilitacyjnych.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="wypadki-przy-pracy">
+                    <h3>Wypadki przy pracy</h3>
+                    <p>Dochodzenie roszczeń z tytułu wypadków przy pracy i chorób zawodowych, w tym ustalanie okoliczności zdarzeń.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="swiadczenia-rodzinne">
+                    <h3>Świadczenia rodzinne</h3>
+                    <p>Obsługa prawna w zakresie świadczeń z tytułu macierzyństwa, rodzicielstwa i niezdolności do pracy.</p>
                     <button class="btn">Wyślij zapytanie</button>
                 </div>
             </div>
@@ -593,7 +521,7 @@
     
     <div id="email-modal" class="email-modal">
         <div class="email-form">
-            <button class="close-modal">&times;</button>
+            <span class="close-modal">&times;</span>
             <h2>Formularz kontaktowy</h2>
             <form id="contact-form">
                 <div class="form-group">
@@ -625,19 +553,18 @@
         <div class="container">
             <div class="footer-content">
                 <h2>Kontakt</h2>
-                <p>Kancelaria Prawna Anna Kowalska</p>
-                <p>ul. Prawnicza 123, 00-001 Warszawa</p>
+                <p>Kancelaria Prawna Alicja Banaszak</p>
+                <p>ul. Prawnicza 123, 00-001 Poznań</p>
                 <p>tel: +48 123 456 789</p>
-                <p>email: kontakt@lexmoderna.pl</p>
-
+                <p>email: kontakt@a.banaszak.pl</p>
                 
                 <div class="social-links">
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:kontakt@lexmoderna.pl" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="mailto:kontakt@a.banaszak.pl" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
                 
-                <p class="copyright">© 2023 Kancelaria Prawna Anna Kowalska. Wszelkie prawa zastrzeżone.</p>
+                <p class="copyright">© 2023 Kancelaria Prawna Alicja Banaszak. Wszelkie prawa zastrzeżone.</p>
             </div>
         </div>
     </footer>
@@ -655,31 +582,18 @@
                     const serviceName = card.querySelector('h3').textContent;
                     serviceInput.value = serviceName;
                     emailModal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
                 }
             });
         });
         
         closeModal.addEventListener('click', () => {
             emailModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
         });
         
         window.addEventListener('click', (e) => {
             if(e.target === emailModal) {
                 emailModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
             }
-        });
-        
-        // Form submission
-        const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Wiadomość została wysłana! Skontaktujemy się z Tobą w ciągu 24 godzin.');
-            emailModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-            contactForm.reset();
         });
         
         // Smooth scrolling for anchor links
