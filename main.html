@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kancelaria Prawna | Nowoczesne Podejście do Prawa</title>
+    <style>
+        :root {
+            --dark: #232742;
+            --light: #EFE8D6;
+            --accent: #C5A46D;
+            --text-dark: #333;
+            --text-light: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--dark);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: var(--light);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(35, 39, 66, 0.8), rgba(35, 39, 66, 0.8)), 
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: var(--light);
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent);
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--light);
+            color: var(--light);
+            margin-left: 1rem;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .about {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+            font-size: 2.5rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .services {
+            padding: 5rem 0;
+            background-color: var(--dark);
+            color: var(--light);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background-color: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255,255,255,0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+        
+        .service-card p {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card .btn {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .email-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .email-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .email-form {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #fff;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">LEX MODERNA</div>
+                <div class="nav-links">
+                    <a href="#about">O mnie</a>
+                    <a href="#services">Usługi</a>
+                    <a href="#contact">Kontakt</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Nowoczesne podejście do prawa</h1>
+            <p>Łączę tradycyjne wartości prawnicze z innowacyjnymi rozwiązaniami, aby zapewnić kompleksową obsługę prawną dostosowaną do Twoich potrzeb.</p>
+            <a href="#services" class="btn">Poznaj usługi</a>
+            <a href="#contact" class="btn btn-outline">Skontaktuj się</a>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">O mnie</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Anna Kowalska</h2>
+                    <p>Jestem prawnikiem z ponad 10-letnim doświadczeniem, specjalizującym się w prawie gospodarczym i cywilnym. Moja praktyka opiera się na indywidualnym podejściu do każdego klienta i poszukiwaniu kreatywnych rozwiązań prawnych.</p>
+                    <p>Ukończyłam studia prawnicze na Uniwersytecie Warszawskim, a następnie odbyłam aplikację radcowską. Obecnie prowadzę własną kancelarię, gdzie łączę tradycyjne wartości prawnicze z nowoczesnymi metodami pracy.</p>
+                    <p>Wierzę, że prawo powinno być nie tylko skuteczne, ale także zrozumiałe i dostępne dla każdego. Dlatego stawiam na przejrzystą komunikację i budowanie długotrwałych relacji z klientami.</p>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Anna Kowalska - prawnik">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Obszary specjalizacji</h2>
+            <div class="services-grid">
+                <div class="service-card" data-service="spory-gospodarcze">
+                    <h3>Obsługa sporów gospodarczych</h3>
+                    <p>Kompleksowa obsługa prawna sporów między przedsiębiorcami, w tym windykacja należności, egzekucja zobowiązań i postępowania sądowe.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="prawna-firm">
+                    <h3>Obsługa prawna firm</h3>
+                    <p>Stała opieka prawna dla przedsiębiorstw, w tym przygotowywanie dokumentów, doradztwo przy podejmowaniu decyzji biznesowych i reprezentacja przed organami.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="umowy">
+                    <h3>Obsługa prawna umów</h3>
+                    <p>Przygotowywanie, weryfikacja i negocjowanie umów handlowych, cywilnoprawnych i pracowniczych, dostosowanych do indywidualnych potrzeb klienta.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="nieruchomosci">
+                    <h3>Prawo nieruchomości</h3>
+                    <p>Kompleksowa obsługa transakcji nieruchomościowych, w tym due diligence, przygotowywanie umów i reprezentacja w postępowaniach administracyjnych.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="ochrona-danych">
+                    <h3>Ochrona danych osobowych</h3>
+                    <p>Doradztwo w zakresie RODO, przygotowanie dokumentacji ochrony danych, reprezentacja przed organami nadzorczymi.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+                
+                <div class="service-card" data-service="wlasność-intelektualna">
+                    <h3>Własność intelektualna</h3>
+                    <p>Ochrona praw autorskich, znaków towarowych, patentów oraz zwalczanie nieuczciwej konkurencji.</p>
+                    <button class="btn">Wyślij zapytanie</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="email-modal" class="email-modal">
+        <div class="email-form">
+            <span class="close-modal">&times;</span>
+            <h2>Formularz kontaktowy</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Imię i nazwisko</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="service">Usługa</label>
+                    <input type="text" id="service" name="service" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="message">Wiadomość</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Wyślij wiadomość</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <h2>Kontakt</h2>
+                <p>Kancelaria Prawna Anna Kowalska</p>
+                <p>ul. Prawnicza 123, 00-001 Warszawa</p>
+                <p>tel: +48 123 456 789</p>
+                <p>email: kontakt@lexmoderna.pl</p>
+                
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:kontakt@lexmoderna.pl" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                
+                <p class="copyright">© 2023 Kancelaria Prawna Anna Kowalska. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Modal functionality
+        const serviceCards = document.querySelectorAll('.service-card');
+        const emailModal = document.getElementById('email-modal');
+        const closeModal = document.querySelector('.close-modal');
+        const serviceInput = document.getElementById('service');
+        
+        serviceCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                if(e.target.classList.contains('btn') || e.target.tagName === 'BUTTON') {
+                    const serviceName = card.querySelector('h3').textContent;
+                    serviceInput.value = serviceName;
+                    emailModal.classList.add('active');
+                }
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            emailModal.classList.remove('active');
+        });
+        
+        window.addEventListener('click', (e) => {
+            if(e.target === emailModal) {
+                emailModal.classList.remove('active');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
