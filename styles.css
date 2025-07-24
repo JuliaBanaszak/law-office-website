@@ -4,6 +4,7 @@
     --accent: #C5A46D;
     --text-dark: #333;
     --text-light: #fff;
+    --detail: #EF5342;
 }
 
 * {
@@ -19,8 +20,10 @@ body {
     line-height: 1.6;
 }
 
+/*top bar*/
+
 header {
-    background-color: var(--dark);
+    background-color: var(--detail); 
     padding: 1.5rem 0;
     position: sticky;
     top: 0;
@@ -67,7 +70,7 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--accent);
+    background-color: var(--dark);
     transition: width 0.3s ease;
 }
 
@@ -155,7 +158,7 @@ nav {
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
-    background-color: var(--accent);
+    background-color: var(--detail);
     color: var(--dark);
     text-decoration: none;
     font-weight: 600;
@@ -189,9 +192,26 @@ nav {
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--dark);
     font-size: 2.5rem;
     position: relative;
+}
+
+/* About section (dark text on light background) */
+.about .section-title {
+    color: var(--dark); /* #232742 */
+}
+
+.about .section-title:after {
+    background-color: var(--detail); /* #C5A46D */
+}
+
+/* Services section (light text on dark background) */
+.services .section-title {
+    color: var(--light); /* #EFE8D6 */
+}
+
+.services .section-title:after {
+    background-color: var(--detail); /* #C5A46D */
 }
 
 .section-title:after {
@@ -202,7 +222,7 @@ nav {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: var(--accent);
+    background-color: var(--detail);
 }
 
 .about-content {
@@ -370,7 +390,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: var(--accent);
+    color: var(--detail);
 }
 
 .copyright {
