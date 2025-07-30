@@ -8,15 +8,30 @@
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+    <!-- Add these lines for Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <body>
     <header>
         <div class="container">
             <nav>
-                <div class="logo">a.banaszak</div>
+                <div class="logo">
+                    <span class="title">Radca Prawny</span>
+                    <span class="name">Alicja Banaszak</span>
+                </div>
                 <div class="nav-links">
-                    <a href="#about">O mnie</a>
-                    <a href="#services">Usługi</a>
-                    <a href="#contact">Kontakt</a>
+                    <a href="#about">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <span>O mnie</span>
+                    </a>
+                    <a href="#services">
+                        <ion-icon name="book-outline"></ion-icon>
+                        <span>Usługi</span>
+                    </a>
+                    <a href="#contact">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <span>Kontakt</span>
+                    </a>
                 </div>
             </nav>
         </div>

@@ -11,7 +11,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    /*font-family: 'Inter', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -22,13 +23,21 @@ body {
 
 /*top bar*/
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+
 header {
     background-color: var(--detail); 
-    padding: 1.5rem 0;
+    padding: 0.2rem 0;
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 100px;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .container {
@@ -45,9 +54,28 @@ nav {
 
 .logo {
     color: var(--light);
-    font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.1;
+}
+
+.logo .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2px;
+}
+
+.logo .name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -60,14 +88,51 @@ nav {
     text-decoration: none;
     font-weight: 500;
     position: relative;
-    padding: 0.5rem 0;
+    padding: 1rem 0.5rem; /*adjusted padding*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /*space between icon and text*/
+    transition: all 0.3s ease;
 }
 
+/*icon styling*/
+.nav-links a ion-icon {
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    color: var(--light);
+    opacity: 0.8;
+}
+
+/*text styling*/
+.nav-links a span {
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*hover effects*/
+.nav-links a:hover {
+    transform: translateY(-5px);
+}
+
+.nav-links a:hover ion-icon {
+    transform: scale(1.2);
+    opacity: 1;
+    color: var(--dark);
+}
+
+.nav-links a:hover span {
+    color: var(--dark);
+}
+
+/*animation under the text*/
 .nav-links a:after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 2px;
     background-color: var(--dark);
@@ -75,7 +140,7 @@ nav {
 }
 
 .nav-links a:hover:after {
-    width: 100%;
+    width: 80%;
 }
 
 /*.hero {
@@ -89,7 +154,7 @@ nav {
 }*/
 
 .hero {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     background: linear-gradient(rgba(35, 39, 66, 0.8), rgba(35, 39, 66, 0.8)), 
@@ -98,6 +163,11 @@ nav {
     text-align: center;
     position: relative;
     z-index: 1;
+    margin-top: -150px; /* Pulls content up */
+    padding-top: 120px; /* Makes space for header */
+    z-index: 0;
+    background-position: center 30%; /* Moves image up to show head */
+    /* Keep other hero properties */
 }
 
 .wave-divider {
